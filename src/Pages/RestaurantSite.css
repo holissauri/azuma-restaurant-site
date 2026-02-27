@@ -1,0 +1,1209 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700;800&display=swap");
+
+.azuma-site {
+  --azuma-ink: #1f2329;
+  --azuma-ink-soft: #4d5056;
+  --azuma-paper: #f4ead7;
+  --azuma-accent: #c88a2d;
+  --azuma-accent-dark: #8c5e16;
+  --azuma-red: #e14b3b;
+  --azuma-navy: #0e1320;
+  --azuma-line: rgba(31, 35, 41, 0.15);
+  --azuma-shadow: 0 18px 45px rgba(14, 19, 32, 0.15);
+  color: var(--azuma-ink);
+  background:
+    radial-gradient(circle at 12% 5%, rgba(200, 138, 45, 0.18), transparent 28%),
+    radial-gradient(circle at 90% 10%, rgba(225, 75, 59, 0.16), transparent 24%),
+    var(--azuma-paper);
+  min-height: 100vh;
+}
+
+.azuma-site,
+.azuma-site * {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.azuma-site h1,
+.azuma-site h2,
+.azuma-site h3,
+.azuma-site .azuma-brand {
+  font-family: "Shippori Mincho", serif;
+}
+
+.azuma-nav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 6vw;
+  background: rgba(14, 19, 32, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.azuma-brand {
+  color: #fdf8ef;
+  text-decoration: none;
+  font-size: clamp(1.1rem, 1vw + 1rem, 1.5rem);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.azuma-brand span {
+  font-size: 0.95rem;
+  opacity: 0.72;
+  margin-right: 0.35rem;
+}
+
+.azuma-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.azuma-nav-links a {
+  color: rgba(252, 244, 228, 0.9);
+  text-decoration: none;
+  font-size: 0.92rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease;
+}
+
+.azuma-nav-links a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.azuma-admin-link {
+  background: var(--azuma-accent);
+  color: var(--azuma-navy) !important;
+  font-weight: 700;
+}
+
+.azuma-hero {
+  position: relative;
+  width: min(1280px, 92vw);
+  min-height: clamp(360px, 58vw, 560px);
+  border-radius: 24px;
+  overflow: hidden;
+  margin: 2.4rem auto 0.6rem;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--azuma-shadow);
+}
+
+.azuma-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      130deg,
+      rgba(14, 19, 32, 0.9),
+      rgba(14, 19, 32, 0.43) 55%,
+      rgba(14, 19, 32, 0.7)
+    );
+}
+
+.azuma-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: clamp(1.4rem, 2.1vw, 2.4rem);
+  max-width: 620px;
+  color: #fffefb;
+}
+
+.azuma-kicker {
+  display: inline-flex;
+  padding: 0.3rem 0.7rem;
+  margin-bottom: 0.7rem;
+  border-radius: 999px;
+  background: rgba(200, 138, 45, 0.2);
+  border: 1px solid rgba(200, 138, 45, 0.6);
+  font-size: 0.84rem;
+}
+
+.azuma-hero h1 {
+  font-size: clamp(1.7rem, 2.6vw, 3.2rem);
+  line-height: 1.1;
+  margin-bottom: 0.9rem;
+}
+
+.azuma-hero p {
+  max-width: 54ch;
+  opacity: 0.95;
+}
+
+.azuma-hero-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.azuma-hero-actions a {
+  text-decoration: none;
+  padding: 0.7rem 1.1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.93rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.azuma-hero-actions a:first-child {
+  color: var(--azuma-navy);
+  background: var(--azuma-accent);
+}
+
+.azuma-hero-actions a:last-child {
+  color: #fffefb;
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.azuma-hero-actions a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+}
+
+.azuma-banner-dots {
+  width: min(1280px, 92vw);
+  margin: 0 auto 1.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.azuma-banner-dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(14, 19, 32, 0.25);
+  cursor: pointer;
+}
+
+.azuma-banner-dots button.active {
+  width: 28px;
+  background: var(--azuma-red);
+}
+
+.azuma-section {
+  width: min(1280px, 92vw);
+  margin: 0 auto;
+  padding: 2.4rem 0 1.1rem;
+}
+
+.azuma-section-head p {
+  color: var(--azuma-red);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.azuma-section-head h2 {
+  font-size: clamp(1.35rem, 2.2vw, 2.35rem);
+  margin-top: 0.25rem;
+}
+
+.azuma-grid {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.azuma-card {
+  border: 1px solid var(--azuma-line);
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 24px rgba(31, 35, 41, 0.07);
+}
+
+.azuma-card-image-wrap {
+  position: relative;
+  height: 172px;
+  overflow: hidden;
+}
+
+.azuma-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.azuma-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0.24rem 0.56rem;
+  border-radius: 999px;
+  background: rgba(14, 19, 32, 0.92);
+  color: #fff;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+
+.azuma-card-content {
+  padding: 0.95rem;
+}
+
+.azuma-card-category {
+  color: var(--azuma-accent-dark);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+
+.azuma-card-content h3 {
+  margin-top: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.azuma-card-content p {
+  margin-top: 0.45rem;
+  color: var(--azuma-ink-soft);
+  font-size: 0.91rem;
+  line-height: 1.45;
+}
+
+.azuma-card-content strong {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--azuma-red);
+  font-size: 1rem;
+}
+
+.azuma-empty {
+  color: var(--azuma-ink-soft);
+  border: 1px dashed var(--azuma-line);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.azuma-store-details {
+  width: min(1280px, 92vw);
+  margin: 2.4rem auto 0;
+}
+
+.azuma-store-details-inner {
+  border: 1px solid var(--azuma-line);
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12px 24px rgba(14, 19, 32, 0.08);
+}
+
+.azuma-store-details-inner > h2 {
+  margin: 0;
+  padding: 1.25rem 1.4rem;
+  font-size: clamp(1.15rem, 1.7vw, 1.85rem);
+  border-bottom: 1px solid var(--azuma-line);
+  background: rgba(248, 244, 235, 0.92);
+}
+
+.azuma-detail-group + .azuma-detail-group {
+  border-top: 1px solid var(--azuma-line);
+}
+
+.azuma-detail-group-title {
+  margin: 0;
+  padding: 0.95rem 1.4rem;
+  border-left: 4px solid var(--azuma-accent);
+  background: rgba(252, 249, 241, 0.92);
+  font-size: 1.05rem;
+}
+
+.azuma-detail-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  border-top: 1px solid rgba(31, 35, 41, 0.12);
+}
+
+.azuma-detail-label {
+  padding: 0.95rem 1rem;
+  background: rgba(31, 35, 41, 0.05);
+  border-right: 1px solid rgba(31, 35, 41, 0.08);
+  font-weight: 700;
+}
+
+.azuma-detail-value {
+  padding: 0.95rem 1.1rem;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.azuma-detail-value p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--azuma-ink-soft);
+}
+
+.azuma-detail-value p + p {
+  margin-top: 0.28rem;
+}
+
+.azuma-map-embed-wrap {
+  margin-top: 0.75rem;
+  max-width: 640px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--azuma-line);
+}
+
+.azuma-map-embed-wrap iframe {
+  width: 100%;
+  height: 220px;
+  border: 0;
+  display: block;
+}
+
+.azuma-contact {
+  width: min(1280px, 92vw);
+  margin: 2.6rem auto 0;
+  border-radius: 24px 24px 0 0;
+  padding: 2.2rem 1.3rem 2.6rem;
+  background:
+    linear-gradient(140deg, rgba(14, 19, 32, 0.98), rgba(22, 30, 51, 0.95)),
+    var(--azuma-navy);
+  color: #fef5e7;
+  text-align: center;
+}
+
+.azuma-contact h2 {
+  font-size: clamp(1.45rem, 1.7vw, 2.1rem);
+}
+
+.azuma-contact p {
+  margin-top: 0.45rem;
+  opacity: 0.9;
+}
+
+.azuma-contact-actions {
+  margin-top: 1.1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.azuma-contact-actions a {
+  color: #0e1320;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.66rem 1rem;
+  border-radius: 10px;
+  background: #fef5e7;
+}
+
+.azuma-contact-actions a:last-child {
+  color: #fffefb;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+}
+
+.azuma-admin {
+  padding: 1.5rem 0 2.5rem;
+}
+
+.azuma-admin-top {
+  width: min(1280px, 92vw);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(14, 19, 32, 0.95);
+  color: #fff;
+}
+
+.azuma-admin-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.azuma-admin-top p {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.azuma-admin-top h1 {
+  font-size: clamp(1.2rem, 1.8vw, 2rem);
+}
+
+.azuma-back-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--azuma-navy);
+  background: var(--azuma-accent);
+  padding: 0.62rem 0.9rem;
+  border-radius: 10px;
+}
+
+.azuma-logout-link {
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.62rem 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.azuma-auth-shell {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2.2rem);
+  background:
+    radial-gradient(circle at 14% 12%, rgba(232, 157, 41, 0.24), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(255, 112, 67, 0.24), transparent 32%),
+    linear-gradient(155deg, #101724 8%, #161f2f 45%, #101724 100%);
+}
+
+.azuma-auth-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.azuma-lantern {
+  position: absolute;
+  width: 56px;
+  height: 140px;
+  border-radius: 999px;
+  background:
+    linear-gradient(to bottom, rgba(255, 241, 210, 0.95), rgba(228, 128, 32, 0.95));
+  box-shadow:
+    0 0 0 4px rgba(255, 214, 148, 0.14),
+    0 24px 36px rgba(0, 0, 0, 0.36),
+    0 0 60px rgba(255, 168, 58, 0.42);
+  animation: azumaLanternFloat 3.6s ease-in-out infinite;
+}
+
+.azuma-lantern::before,
+.azuma-lantern::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 62%;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(91, 49, 11, 0.55);
+}
+
+.azuma-lantern::before {
+  top: 14px;
+}
+
+.azuma-lantern::after {
+  bottom: 14px;
+}
+
+.azuma-lantern-left {
+  left: clamp(2rem, 8vw, 7rem);
+  top: clamp(1rem, 8vh, 4.5rem);
+}
+
+.azuma-lantern-right {
+  right: clamp(2rem, 8vw, 7rem);
+  top: clamp(1.8rem, 14vh, 8rem);
+  animation-delay: 1.2s;
+}
+
+.azuma-smoke {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  filter: blur(38px);
+  opacity: 0.3;
+  animation: azumaSmokeMove 7.8s ease-in-out infinite;
+}
+
+.azuma-smoke-one {
+  right: 18%;
+  bottom: 10%;
+  background: rgba(255, 165, 78, 0.52);
+}
+
+.azuma-smoke-two {
+  left: 14%;
+  bottom: 14%;
+  background: rgba(146, 95, 42, 0.38);
+  animation-delay: 2.6s;
+}
+
+.azuma-auth-layout {
+  position: relative;
+  z-index: 1;
+  width: min(1040px, 100%);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1.1rem;
+}
+
+.azuma-auth-story,
+.azuma-auth-card {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: clamp(1rem, 2.3vw, 1.6rem);
+  backdrop-filter: blur(8px);
+}
+
+.azuma-auth-story {
+  background:
+    linear-gradient(160deg, rgba(26, 34, 52, 0.92), rgba(14, 18, 28, 0.9)),
+    #111827;
+  color: #f9e7c6;
+}
+
+.azuma-auth-badge {
+  display: inline-flex;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 187, 87, 0.6);
+  color: #ffd68e;
+  padding: 0.3rem 0.62rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.azuma-auth-story h1 {
+  margin-top: 0.9rem;
+  font-size: clamp(1.55rem, 2.4vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.azuma-auth-story > p {
+  margin-top: 0.75rem;
+  color: rgba(255, 235, 199, 0.86);
+  line-height: 1.7;
+}
+
+.azuma-auth-scenes {
+  margin-top: 1.1rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.azuma-auth-scenes div {
+  padding: 0.72rem 0.85rem;
+  border-radius: 14px;
+  background: rgba(255, 180, 79, 0.08);
+  border: 1px solid rgba(255, 180, 79, 0.22);
+}
+
+.azuma-auth-scenes strong {
+  display: block;
+  font-size: 0.94rem;
+}
+
+.azuma-auth-scenes span {
+  display: block;
+  margin-top: 0.2rem;
+  color: rgba(255, 236, 206, 0.82);
+  font-size: 0.87rem;
+}
+
+.azuma-auth-card {
+  width: min(560px, 100%);
+  background:
+    linear-gradient(150deg, rgba(250, 243, 229, 0.96), rgba(244, 235, 219, 0.94)),
+    #f8efde;
+  box-shadow: 0 20px 46px rgba(6, 10, 18, 0.42);
+}
+
+.azuma-auth-layout .azuma-auth-card {
+  width: 100%;
+}
+
+.azuma-auth-panel-title {
+  margin: 0;
+  color: var(--azuma-red);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.azuma-auth-card h1,
+.azuma-auth-card h2 {
+  margin: 0;
+  margin-top: 0.28rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.95rem);
+}
+
+.azuma-auth-subtitle {
+  margin-top: 0.4rem;
+  color: rgba(31, 35, 41, 0.76);
+}
+
+.azuma-auth-status {
+  margin-top: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.azuma-auth-status span {
+  border-radius: 999px;
+  background: rgba(16, 23, 36, 0.08);
+  border: 1px solid rgba(16, 23, 36, 0.18);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: rgba(16, 23, 36, 0.78);
+  padding: 0.28rem 0.56rem;
+}
+
+.azuma-auth-help {
+  margin-top: 0.72rem;
+  padding: 0.7rem 0.76rem;
+  border-radius: 12px;
+  background: rgba(200, 138, 45, 0.08);
+  border: 1px solid rgba(200, 138, 45, 0.18);
+  color: var(--azuma-ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.azuma-auth-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.72rem;
+}
+
+.azuma-auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.azuma-auth-form label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--azuma-ink-soft);
+  letter-spacing: 0.02em;
+}
+
+.azuma-auth-form input {
+  border: 1px solid rgba(31, 35, 41, 0.28);
+  border-radius: 12px;
+  padding: 0.72rem 0.78rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.azuma-auth-password-wrap {
+  position: relative;
+}
+
+.azuma-auth-password-wrap input {
+  width: 100%;
+  padding-right: 5.1rem;
+}
+
+.azuma-toggle-password {
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid rgba(31, 35, 41, 0.2);
+  background: rgba(14, 19, 32, 0.06);
+  color: var(--azuma-ink);
+  border-radius: 9px;
+  padding: 0.32rem 0.56rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.azuma-auth-form input:focus {
+  border-color: var(--azuma-accent-dark);
+  box-shadow: 0 0 0 3px rgba(200, 138, 45, 0.18);
+}
+
+.azuma-auth-submit {
+  margin-top: 0.35rem;
+  border: 0;
+  border-radius: 12px;
+  padding: 0.78rem 0.94rem;
+  background:
+    linear-gradient(145deg, #d79a3a, #bf7c23),
+    var(--azuma-accent);
+  color: #16100b;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+}
+
+.azuma-auth-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(151, 90, 11, 0.3);
+  filter: saturate(1.06);
+}
+
+.azuma-auth-submit:disabled {
+  opacity: 0.62;
+  cursor: not-allowed;
+}
+
+.azuma-auth-back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: var(--azuma-accent-dark);
+  font-weight: 700;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.azuma-auth-back-link:hover {
+  color: #6e4917;
+  transform: translateX(-2px);
+}
+
+.azuma-auth-error {
+  margin-top: 0.75rem;
+  border-radius: 12px;
+  padding: 0.66rem 0.72rem;
+  background: rgba(143, 47, 40, 0.12);
+  border: 1px solid rgba(143, 47, 40, 0.32);
+  color: #7d2b24;
+  font-size: 0.9rem;
+}
+
+@keyframes azumaLanternFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes azumaSmokeMove {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -18px) scale(1.08);
+  }
+}
+
+.azuma-admin-stats {
+  width: min(1280px, 92vw);
+  margin: 1rem auto 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.azuma-admin-stats div {
+  border-radius: 14px;
+  padding: 1rem;
+  border: 1px solid var(--azuma-line);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.azuma-admin-stats p {
+  color: var(--azuma-ink-soft);
+  font-size: 0.84rem;
+}
+
+.azuma-admin-stats strong {
+  font-size: 1.5rem;
+  color: var(--azuma-accent-dark);
+}
+
+.azuma-admin-switcher {
+  width: min(1280px, 92vw);
+  margin: 1rem auto 0;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.azuma-admin-switcher button {
+  border: 1px solid var(--azuma-line);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  background: rgba(255, 255, 255, 0.76);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.azuma-admin-switcher button.active {
+  background: var(--azuma-navy);
+  color: #fff;
+  border-color: transparent;
+}
+
+.azuma-admin-panel {
+  width: min(1280px, 92vw);
+  margin: 1rem auto 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1.3fr;
+}
+
+.azuma-admin-panel-single {
+  grid-template-columns: 1fr;
+}
+
+.azuma-form,
+.azuma-list {
+  border-radius: 18px;
+  padding: 1rem;
+  border: 1px solid var(--azuma-line);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.azuma-details-form {
+  gap: 1rem;
+}
+
+.azuma-details-help {
+  margin: 0;
+  color: var(--azuma-ink-soft);
+  font-size: 0.9rem;
+}
+
+.azuma-details-fieldset {
+  margin: 0;
+  border: 1px solid var(--azuma-line);
+  border-radius: 12px;
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.azuma-details-fieldset legend {
+  padding: 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--azuma-accent-dark);
+}
+
+.azuma-details-row {
+  border: 1px dashed var(--azuma-line);
+  border-radius: 10px;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.azuma-details-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--azuma-ink-soft);
+}
+
+.azuma-details-row textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.azuma-form h2,
+.azuma-list h2 {
+  font-size: 1.2rem;
+}
+
+.azuma-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.azuma-form input,
+.azuma-form textarea {
+  border: 1px solid rgba(31, 35, 41, 0.28);
+  border-radius: 10px;
+  padding: 0.64rem 0.7rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.azuma-form input:focus,
+.azuma-form textarea:focus {
+  border-color: var(--azuma-accent-dark);
+  box-shadow: 0 0 0 3px rgba(200, 138, 45, 0.18);
+}
+
+.azuma-image-tools {
+  border: 1px dashed var(--azuma-line);
+  border-radius: 12px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.azuma-image-tools p {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.azuma-upload-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.azuma-upload-input {
+  max-width: 280px;
+  font-size: 0.84rem;
+}
+
+.azuma-thumb-preview {
+  width: 100px;
+  height: 100px;
+}
+
+.azuma-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--azuma-line);
+}
+
+.azuma-thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px dashed var(--azuma-line);
+  display: grid;
+  place-items: center;
+  font-size: 0.78rem;
+  color: var(--azuma-ink-soft);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.azuma-check-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+}
+
+.azuma-check-row label,
+.azuma-single-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.azuma-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.azuma-form-actions button,
+.azuma-inline-actions button {
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.58rem 0.88rem;
+}
+
+.azuma-form-actions button {
+  background: var(--azuma-accent);
+  color: var(--azuma-navy);
+}
+
+.azuma-form-actions button.ghost {
+  border: 1px solid var(--azuma-line);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--azuma-ink);
+}
+
+.azuma-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.azuma-list article {
+  border: 1px solid var(--azuma-line);
+  border-radius: 12px;
+  padding: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.azuma-list-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.azuma-list-media {
+  width: 78px;
+  height: 78px;
+  flex: 0 0 78px;
+}
+
+.azuma-list-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.azuma-list h3 {
+  font-size: 1.05rem;
+}
+
+.azuma-list p {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: var(--azuma-ink-soft);
+}
+
+.azuma-list small {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
+  color: var(--azuma-accent-dark);
+  font-weight: 700;
+}
+
+.azuma-inline-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.azuma-inline-actions button {
+  background: rgba(14, 19, 32, 0.9);
+  color: #fff;
+}
+
+.azuma-inline-actions button.danger {
+  background: #8f2f28;
+}
+
+.azuma-inline-actions button.warn {
+  background: #6e5a1f;
+}
+
+@media (max-width: 980px) {
+  .azuma-auth-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .azuma-lantern {
+    width: 48px;
+    height: 120px;
+  }
+
+  .azuma-admin-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .azuma-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .azuma-nav-links {
+    justify-content: flex-start;
+  }
+
+  .azuma-auth-shell {
+    padding: 0.85rem;
+  }
+
+  .azuma-auth-story {
+    order: 2;
+  }
+
+  .azuma-auth-card {
+    order: 1;
+    width: 100%;
+  }
+
+  .azuma-auth-status {
+    gap: 0.35rem;
+  }
+
+  .azuma-lantern-left {
+    left: -10px;
+  }
+
+  .azuma-lantern-right {
+    right: -10px;
+  }
+
+  .azuma-admin-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .azuma-hero {
+    min-height: 380px;
+  }
+
+  .azuma-store-details-inner > h2,
+  .azuma-detail-group-title {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .azuma-detail-row {
+    grid-template-columns: 1fr;
+  }
+
+  .azuma-detail-label {
+    border-right: 0;
+    border-bottom: 1px solid rgba(31, 35, 41, 0.08);
+  }
+
+  .azuma-list article {
+    flex-direction: column;
+  }
+
+  .azuma-list-body {
+    width: 100%;
+  }
+
+  .azuma-inline-actions {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
